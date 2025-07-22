@@ -1,8 +1,8 @@
-#Netflix-GPT
+# Netflix-GPT
 -create React app
 -configured TailWind CSS
 
-#Planning
+# Planning
 -Login/sign-up
   -sign In/sign-up form
   -Redirect to Browser Page
