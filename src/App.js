@@ -1,10 +1,10 @@
-import './App.css';
+import Body from './Components/Body';
+import React from 'react';
 function App() {
   return (
-    <div className="text-blue-300 font-bold text-lg">
-      Welcome to Netflix Gpt!
+    <div className="App">
+      <Body />
     </div>
   );
 }
-
 export default App;
