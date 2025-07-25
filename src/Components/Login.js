@@ -4,12 +4,11 @@ import {useState,useRef } from 'react';
 import {checkValidation} from '../utils/validate';
 import  { createUserWithEmailAndPassword ,signInWithEmailAndPassword} from 'firebase/auth';
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BG_IMG } from '../utils/constants';
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [signInForm, setSignInForm] = useState(true);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -46,7 +45,7 @@ const Login = () => {
         }).then(() => {
           const { uid, email, displayName, photoURL } = auth.currentUser;
           dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
-          navigate('/browse');
+         
         }).catch((error) => {
         });
     })
@@ -61,7 +60,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email.current.value, Password.current.value)
   .then((userCredential) => {
     const user = userCredential.user;
-    navigate('/browse');
+    
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -77,7 +76,7 @@ const Login = () => {
   return <div>
     <Header />
     <div className='absolute w-full h-full bg-cover opacity-88'>
-    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/a927b1ee-784d-494a-aa80-cf7a062d2523/web/IN-en-20250714-TRIFECTA-perspective_5acb7337-c372-45ec-ae12-ddb110e6ad78_large.jpg"
+    <img src={BG_IMG}
     alt="bg-img"/>
     </div>
     <form
