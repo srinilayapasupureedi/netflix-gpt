@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './Header';
 import {useState,useRef } from 'react';
 import {checkValidation} from '../utils/validate';
+import  { createUserWithEmailAndPassword ,signInWithEmailAndPassword} from 'firebase/auth';
+import auth  from '../utils/firebase'; // Import the auth object
 const Login = () => {
   const [signInForm, setSignInForm] = useState(true);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -13,16 +15,54 @@ const Login = () => {
   // This function checks if the email, password, and full name are valid
 
   const handleButtonClick = () => {
-  const message = checkValidation(
-     email.current.value,Password.current.value,
-     fullName.current ? fullName.current.value : ''
-  );
-  setErrorMsg(message);
-};
+    const message = signInForm
+    ? checkValidation(email.current.value, Password.current.value,null) // Sign-in (no fullName)
+    : checkValidation( // Sign-up (with fullName)
+        email.current.value,
+        Password.current.value,
+        fullName.current.value
+      );
+
+  if (message) {
+    setErrorMsg(message);
+    return;
+  }
+    if(!signInForm) {
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        Password.current.value
+      )
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        console.log("User signed up:", user);
+        // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      setErrorMsg(errorMessage+"- "+errorCode);
+      // ..
+    });
+  }
+   else{
+    signInWithEmailAndPassword(auth, email.current.value, Password.current.value)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    console.log("User signed in:", user);
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrorMsg(errorMessage+"- "+errorCode);
+  });
+   }
+  };
   const toggleSignInForm = () => {
     setSignInForm(!signInForm);
   };
- 
+
   return <div>
     <Header />
     <div className='absolute w-full h-full bg-cover opacity-88'>
@@ -67,7 +107,6 @@ const Login = () => {
       <button
         type="submit"
         onClick={handleButtonClick}
-
         className='bg-red-700 p-4 my-6 rounded-lg w-full cursor-pointer'
       >
         {signInForm ? "Sign In" : "Sign Up"}
