@@ -79,6 +79,10 @@ const Login = () => {
     <img src={BG_IMG}
     alt="bg-img"/>
     </div>
+          <p className="text-sm text-gray-400 italic pb-4 text-center">
+        This is a demo project using Firebase Auth. Not affiliated with or endorsed by Netflix.
+      </p>
+
     <form
       onSubmit={(e) => {
         e.preventDefault();
