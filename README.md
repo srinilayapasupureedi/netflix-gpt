@@ -19,6 +19,12 @@
  - Bug fix: Redirect if the user is not logined redirect/ browse to logined page vice versa
  - unsubscribed to onAuthStateChanged CallBack
  - Add Hardcoded values to constant file
+ - Register TMDB app &create an app &Get access plan
+ - Get Data from TMDB now playing movies list API
+ - Divided Body into Two containers 
+   - main container
+   - secondary container
+ - Designed videoTitle and BackGround trailer in main container
 
 
 

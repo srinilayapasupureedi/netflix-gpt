@@ -1,20 +1,20 @@
+import { getAuth } from "firebase/auth";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCAAbt_KZIs_Iy-6Ny4ck65K6VgqBF5Zgk",
-  authDomain: "streamgpt-235e3.firebaseapp.com",
-  projectId: "streamgpt-235e3",
-  storageBucket: "streamgpt-235e3.firebasestorage.app",
-  messagingSenderId: "896321655749",
-  appId: "1:896321655749:web:59e9cee44b1b9ccf0bf1ac",
-  measurementId: "G-QS9YK8VE5L"
+  apiKey: "AIzaSyDr5t1SClL1sQimsJk9vA-5YiaAMuTpr30",
+  authDomain: "streamgpt-9b408.firebaseapp.com",
+  projectId: "streamgpt-9b408",
+  storageBucket: "streamgpt-9b408.firebasestorage.app",
+  messagingSenderId: "549872031149",
+  appId: "1:549872031149:web:bcc351f0488e97123b3d24",
+  measurementId: "G-DDF0MG0Q1E"
 };
 
 // Initialize Firebase
