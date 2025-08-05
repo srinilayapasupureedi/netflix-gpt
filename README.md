@@ -21,10 +21,16 @@
  - Add Hardcoded values to constant file
  - Register TMDB app &create an app &Get access plan
  - Get Data from TMDB now playing movies list API
+ - created Custom Hook for now Playing movies 
+ - created movileSlice
+ - update store with movies data
  - Divided Body into Two containers 
    - main container
    - secondary container
+ - fetch data for trailer video
  - Designed videoTitle and BackGround trailer in main container
+ - embbed the youtube  video and make it autoplay and mute
+ -Apply tailwind css to make main container look awesome 
 
 
 
