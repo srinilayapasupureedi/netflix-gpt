@@ -7,4 +7,7 @@ export const API_OPTIONS = {
     accept: 'application/json',
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMWQ5YjdkNjA5MTE1ZDI3ZTc5OGEwYjAzOTFlM2JkYyIsIm5iZiI6MTc1MzQ2NjgwNy40LCJzdWIiOiI2ODgzYzdiNzY1ODViZDRlZGJkOWFjMjAiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.nIIuQZl6X6uQJfOt-pXXIXCZHdklyrjcqtAdDrAODNg'
   }
+
 };
+export const  IMG_CDN_PATH="https://image.tmdb.org/t/p/w200";
+

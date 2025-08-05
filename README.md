@@ -30,7 +30,13 @@
  - fetch data for trailer video
  - Designed videoTitle and BackGround trailer in main container
  - embbed the youtube  video and make it autoplay and mute
- -Apply tailwind css to make main container look awesome 
+ - Apply tailwind css to make main container look awesome 
+ - Build secondary Container
+ - Build Movie List
+ - Build movie Card
+ - TMDB Image CDN url
+ - made the brose page amazing with tailwind css
+ - created usePopularMovies Hooks
 
 
 
