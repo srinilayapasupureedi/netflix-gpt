@@ -5,10 +5,9 @@ import VideoBackground from './VideoBackground';
 
 const MainContainer = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
-
   if (!movies || movies.length === 0) {
-    console.log("No movies present");
-    return null; // or return <div>Loading...</div>;
+    
+    return null; 
   }
 
   const mainMovie = movies[0];
