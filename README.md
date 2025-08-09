@@ -37,6 +37,13 @@
  - TMDB Image CDN url
  - made the brose page amazing with tailwind css
  - created usePopularMovies Hooks
+ - Building Serach Page
+    - GPT search Bar
+    - GPT Movie Suggestions
+ - Build Dynamic Language chnage option
+ - multi Language Feature
+ - Integrate GPT APIS(get openAI key)
+
 
 
 
