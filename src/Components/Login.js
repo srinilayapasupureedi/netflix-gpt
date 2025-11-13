@@ -75,10 +75,11 @@ const Login = () => {
 
   return <div>
     <Header />
-    <div className='absolute w-full h-full bg-cover opacity-88'>
-    <img src={BG_IMG}
-    alt="bg-img"/>
-    </div>
+   <div
+  className="absolute inset-0 h-full w-full bg-cover bg-center opacity-90"
+  style={{ backgroundImage: `url(${BG_IMG})` }}
+  ></div>
+
           <p className="text-sm text-gray-400 italic pb-4 text-center">
         This is a demo project using Firebase Auth. Not affiliated with or endorsed by Netflix.
       </p>
