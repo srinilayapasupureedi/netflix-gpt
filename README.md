@@ -53,15 +53,3 @@ This project includes authentication, movie browsing, YouTube trailer autoplay, 
   - `useNowPlayingMovies`
   - `usePopularMovies`
 
----
-
-## 🧩 Project Structure
-src/
-│── components/
-│── hooks/
-│── utils/
-│── redux/
-│── pages/
-│── constants/
-│── App.js
-│── index.js
